@@ -1,0 +1,102 @@
+* {
+    margin:0;
+    padding:0;
+    border:none;
+}
+.background {
+    width:100vw;
+    height:100vh;
+    box-sizing:border-box;
+    background-color: #161617;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    overflow:hidden;
+}
+.start {
+    position:absolute;
+    top:40%;
+    height:200px;
+    width:200px;
+    border-radius:50%;
+    font-size:72px;
+    font-family:sans-serif;
+    font-weight:700;
+    transition:0.5s;
+    z-index:2;
+}
+.start:hover {
+    color:white;
+    background-color:red;
+    font-size:0px;
+}
+.startCircle {
+    position:relative;
+    top:37.5%;
+    height:250px;
+    width:250px;
+    border-radius:50%;
+    font-size:72px;
+    font-family:sans-serif;
+    font-weight:700;
+    background-image:url('dog.jpg');
+    background-position:center;
+    transition:0.5s;
+    transform:rotate(20);
+}
+/*----------- Me ---------------*/
+.me {
+    position:absolute;
+    opacity:0;
+    width:100vw;
+    text-align:center;
+    top:50%; left:0;
+    transform:translateY(-50%);
+    transition:0.5s;
+    font-size:46px;font-weight:700;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+}
+.spec {
+    display:inline;
+    opacity:0;
+    font-size:50px; font-weight:900;
+    transition:0.5s;
+}
+#html {
+    color:#FFB028;
+}
+#css {
+    color:#1E96FF;
+}
+#javascript {
+    color:yellow;
+}
+#react {
+    color:aqua;
+}
+.interests {
+    display:inline;
+    opacity:0;
+    font-size:50px; font-weight:900;
+    transition:0.5s;
+}
+#ml {
+    color:#6591FF;
+}
+#software {
+    color:white;
+}
+#opensrc {
+    color:greenyellow;
+}
+.email {
+    position:relative;
+    top:70%;
+    opacity:0;
+    width:100%;
+    text-align:center;
+    font-size:32px; font-weight:900;
+    color:white;
+    transition:0.5s;
+}
