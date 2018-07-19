@@ -27,7 +27,7 @@ class Website extends Component {
             slider.style.width = '100%';
             slider.style.left = '0';
             setTimeout(() => 
-                window.open("https://stackoverflow.com/questions/8454510/open-url-in-same-window-and-in-same-tab","_self"), 
+                window.open("http://www.google.com","_self"), 
             500);
             this.setState(state);
         }
