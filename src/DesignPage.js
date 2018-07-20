@@ -26,7 +26,7 @@ class DesignPage extends Component {
             const slider = document.getElementsByClassName('slider')[0];
             slider.style.width = '100%';
             slider.style.left = '0';
-            this.LoadPage(1);
+            this.LoadPage(active);
         }
     }
     render() {

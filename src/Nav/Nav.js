@@ -29,7 +29,7 @@ const nameHover = {
 function Nav(props) {
     return <nav className = 'nav'>
             <Button name = 'About' active = {props.active} num = {1} onClick = {() => props.onClick(1)}/>
-            <Button name = 'Designs' active = {props.active} num = {2} onClick = {() => props.onClick(2)}/>
+            <Button name = 'Projects' active = {props.active} num = {2} onClick = {() => props.onClick(2)}/>
         </nav>
 }
 // button

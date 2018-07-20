@@ -19,7 +19,6 @@ class AboutPage extends Component {
     }
     componentDidMount() {
         const slider = document.getElementsByClassName('slider')[0];
-        console.log(slider);
         setTimeout(() => {
             slider.style.width = '0%';
             slider.style.left = '100%';
@@ -37,7 +36,7 @@ class AboutPage extends Component {
             const slider = document.getElementsByClassName('slider')[0];
             slider.style.width = '100%';
             slider.style.left = '0';
-            this.LoadPage(2);
+            this.LoadPage(active);
         }
     }
     render() {

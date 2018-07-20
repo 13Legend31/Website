@@ -12,7 +12,6 @@ class Website extends Component {
         }
     }
     LoadPage(page) {
-        console.log(page);
         setTimeout(() => 
             this.setState({page:page})
         ,500);
