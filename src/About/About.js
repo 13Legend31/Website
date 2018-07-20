@@ -53,29 +53,45 @@ class AboutMe extends Component {
             addTimeout(setTimeout(() => me[i].style.opacity = '0', delay));
             delay += 700;
         }
+        // Underline
+        const underline = document.getElementsByClassName('underline');
         // I specialize in 
         const spec = document.getElementsByClassName('spec');
-        addTimeout(setTimeout(() => { me[3].style.opacity = '1'; }, delay));
+        addTimeout(setTimeout(() => { 
+            me[3].style.opacity = '1'; 
+            underline[0].style.width = '100%';
+        }, delay));
         delay += 700;
         for (let i = 0; i < spec.length; i++) {
             addTimeout(setTimeout(() => spec[i].style.opacity = '1', delay));
             delay += 1200;
-            addTimeout(setTimeout(() => spec[i].style.opacity = '0', delay));
-            delay += 600;
         }
-        addTimeout(setTimeout(() => me[3].style.opacity = '0', delay));
+        addTimeout(setTimeout(() => {
+                me[3].style.opacity = '0';
+                for (let i = 0; i < spec.length; i++) {
+                    spec[i].style.opacity = '0';
+                }
+            },delay)
+        );
         delay += 700;
         // My interests
         const interests = document.getElementsByClassName('interests');
-        addTimeout(setTimeout(() => me[4].style.opacity = '1', delay));
+        addTimeout(setTimeout(() => {
+            me[4].style.opacity = '1'
+            underline[1].style.width = '100%';
+        }, delay));
         delay += 900;
         for (let i = 0; i < interests.length; i++) {
             addTimeout(setTimeout(() => interests[i].style.opacity = '1', delay));
-            delay += 1200;
-            addTimeout(setTimeout(() => interests[i].style.opacity = '0', delay));
-            delay += 600;
+            delay += 1300;
         }
-        addTimeout(setTimeout(() => me[4].style.opacity = '0', delay));
+        addTimeout(setTimeout(() => {
+                me[4].style.opacity = '0';
+                for (let i = 0; i < interests.length; i++) {
+                    interests[i].style.opacity = '0';
+                }
+            },delay)
+        );
         delay += 700;
         // Contact me
         addTimeout(setTimeout(() => me[5].style.opacity = '1', delay));
@@ -90,13 +106,15 @@ class AboutMe extends Component {
                 <div className = 'me'>Hi!</div>
                 <div className = 'me'>My name is Larry</div>
                 <div className = 'me'>I'm a Front End Engineer</div>
-                <div className = 'me'>I specialize in:     
+                <div className = 'me' id = 'specialize'>I specialize in  
+                    <div className = 'underline'></div>   
                     <div className = 'spec' id = 'html'>HTML</div>
                     <div className = 'spec' id = 'css'>CSS</div>
                     <div className = 'spec' id = 'javascript'>Javascript</div>
                     <div className = 'spec' id = 'react'>React</div>
                 </div>
-                <div className = 'me'>My interests are: 
+                <div className = 'me' id = 'interest'>My interests are
+                    <div className = 'underline'></div>   
                     <div className = 'interests' id = 'ml'>Machine Learning</div>
                     <div className = 'interests' id = 'software'>Software Development</div>
                     <div className = 'interests' id = 'opensrc'>Open Source</div>
