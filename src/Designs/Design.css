@@ -32,7 +32,8 @@
     opacity:0.5;
     color:white;
     font-size:28px;
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:600;
     text-align:center;
     transition:0.5s;
 }
@@ -43,5 +44,5 @@
     opacity:1;
     height:24%;
     top:76%;
-    font-size:36px;
+    font-size:35px;
 }
