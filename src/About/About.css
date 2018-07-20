@@ -1,13 +1,8 @@
-* {
-    margin:0;
-    padding:0;
-    border:none;
-}
 .background {
     width:100vw;
     height:100vh;
     box-sizing:border-box;
-    background-color: #161617;
+    background:#161617;
     display:flex;
     justify-content: center;
     align-content:center;
@@ -39,7 +34,7 @@
     font-size:72px;
     font-family:sans-serif;
     font-weight:700;
-    background-image:url('dog.jpg');
+    background-image:url('C:/Users/Larry/Desktop/website/src/Images/dog.jpg');
     background-position:center;
     transition:0.5s;
     transform:rotate(20);

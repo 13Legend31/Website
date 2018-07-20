@@ -41,7 +41,6 @@ class Button extends Component {
         this.Unhover = this.Unhover.bind(this);
         //set state
         this.state = {
-            active:props.active,
             hover:false
         };
         //set instanced variables
@@ -59,7 +58,7 @@ class Button extends Component {
         state.hover = false;
         this.setState(state);
     }
-    render() { // where does props.active get passed to?
+    render() { 
         let barStyle,
             nameStyle;
         if (this.props.active === this.num) {
