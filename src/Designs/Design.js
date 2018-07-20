@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 import './Design.css'
+import Futuristic from './Futuristic.jpg'
+import Minimalistic from './Minimalistic.jpg'
+import Colorful from './Colorful.jpg'
+import Mysterious from './Mysterious.jpg'
+import Fantasy from './Fantasy.jpg'
 
 function Element(props) {
     const style = {
@@ -12,11 +17,11 @@ function Element(props) {
 
 function Elems() {
     return <section className = 'designSection'>
-        <Element name = 'Futuristic' src = 'http://vunature.com/wp-content/uploads/2016/11/space-artistic-science-fantasy-art-sci-artwork-futuristic-wallpaper-images-nature-1920x1080.jpg'/>
-        <Element name = 'Minimalistic' src = 'https://wallpaper-house.com/data/out/6/wallpaper2you_83845.jpg'/>
-        <Element name = 'Text'/>
-        <Element name = 'Text'/>
-        <Element name = 'Text'/>
+        <Element name = 'Futuristic' src = {Futuristic}/>
+        <Element name = 'Minimalistic' src = {Minimalistic}/>
+        <Element name = 'Colorful' src = {Colorful}/>
+        <Element name = 'Mysterious' src = {Mysterious}/>
+        <Element name = 'Fantasy' src = {Fantasy}/>
     </section>
 }
 
