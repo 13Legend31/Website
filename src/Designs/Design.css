@@ -31,7 +31,7 @@
     background-color:black;
     opacity:0.5;
     color:white;
-    font-size:28px;
+    font-size:24px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight:600;
     text-align:center;
@@ -42,7 +42,7 @@
 }
 .element:hover .elemName {
     opacity:1;
-    height:24%;
-    top:76%;
-    font-size:35px;
+    height:20%;
+    top:80%;
+    font-size:28px;
 }

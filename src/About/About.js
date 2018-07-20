@@ -89,17 +89,17 @@ class AboutMe extends Component {
             <section className = 'aboutMe'>
                 <div className = 'me'>Hi!</div>
                 <div className = 'me'>My name is Larry</div>
-                <div className = 'me'>I'm a website developer</div>
-                <div className = 'me'>I specialize in     
-                    <div className = 'spec' id = 'html'>    HTML   </div>
-                    <div className = 'spec' id = 'css'>CSS   </div>
-                    <div className = 'spec' id = 'javascript'>Javascript   </div>
-                    <div className = 'spec' id = 'react'>React   </div>
+                <div className = 'me'>I'm a Front End Engineer</div>
+                <div className = 'me'>I specialize in:     
+                    <div className = 'spec' id = 'html'>HTML</div>
+                    <div className = 'spec' id = 'css'>CSS</div>
+                    <div className = 'spec' id = 'javascript'>Javascript</div>
+                    <div className = 'spec' id = 'react'>React</div>
                 </div>
-                <div className = 'me'>My interests are 
-                    <div className = 'interests' id = 'ml'>    Machine Learning   </div>
-                    <div className = 'interests' id = 'software'>Software Development   </div>
-                    <div className = 'interests' id = 'opensrc'>Open Source   </div>
+                <div className = 'me'>My interests are: 
+                    <div className = 'interests' id = 'ml'>Machine Learning</div>
+                    <div className = 'interests' id = 'software'>Software Development</div>
+                    <div className = 'interests' id = 'opensrc'>Open Source</div>
                 </div>
                 <div className = 'me'>If you would like to contact me, please feel free to do so at anytime!</div>
                 <div className = 'email'>larrywu1996@gmail.com</div>
