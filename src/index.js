@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import Nav from './Nav/Nav.js';
 import About from './About/About.js';
 import './index.css'
-import WebsiteDesigns from './Design';
+import WebsiteDesigns from './DesignPage';
 
 class WebsiteAbout extends Component {
     constructor() {

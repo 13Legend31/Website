@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactDom from 'react-dom';
 import Nav from './Nav/Nav';
 import Design from './Designs/Design'
-import './Designs/index.css'
+import './Designs/DesignPage.css'
 import WebsiteAbout from './index'
 
 class WebsiteDesigns extends Component {
