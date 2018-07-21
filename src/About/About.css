@@ -82,6 +82,12 @@
 #react {
     color:aqua;
 }
+#node {
+    color:#47FF1E;
+}
+#sql {
+    color:#1EB7FF;
+}
 .interests {
     opacity:0;
     font-size:50px; font-weight:900;
