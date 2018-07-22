@@ -5,22 +5,21 @@ import Links from './Links/Links.js'
 import './Designs/DesignPage.css'
 
 class DesignPage extends Component {
+    state = {
+        active:2
+    }
     constructor(props) {
         super(props);
-        this.onClick = this.onClick.bind(this);
-        this.state = {
-            active:2
-        }
         this.LoadPage = props.LoadPage;
     }
-    componentDidMount() {
+    componentDidMount = () => {
         const slider = document.getElementsByClassName('slider')[0];
         setTimeout(() => {
             slider.style.width = '0%';
             slider.style.left = '100%';
         },200);
     }
-    onClick(active) {
+    onClick = (active) => {
         if (this.state.active !== active) {
             const state = this.state;
             state.active = active;

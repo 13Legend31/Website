@@ -5,27 +5,25 @@ import Links from './Links/Links.js'
 import './About/AboutPage.css'
 
 class AboutPage extends Component {
+    state = {
+        active:1
+    }
     constructor(props) {
         super(props);
-        this.onClick = this.onClick.bind(this);
-        this.addTimeout = this.addTimeout.bind(this);
-        this.state = {
-            active:1
-        }
         this.LoadPage = props.LoadPage;
         this.timeouts = [];
     }
-    addTimeout(timeout) {
+    addTimeout = (timeout) => {
         this.timeouts.push(timeout);
     }
-    componentDidMount() {
+    componentDidMount = () => {
         const slider = document.getElementsByClassName('slider')[0];
         setTimeout(() => {
             slider.style.width = '0%';
             slider.style.left = '100%';
         });
     }
-    onClick(active) {
+    onClick = (active) => {
         // Clear AboutMe Timeouts
         for (let i = 0; i < this.timeouts.length; i++) {
             clearTimeout(this.timeouts[i]);

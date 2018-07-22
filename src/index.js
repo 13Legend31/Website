@@ -4,14 +4,10 @@ import DesignPage from './DesignPage';
 import AboutPage from './AboutPage';
 
 class Website extends Component {
-    constructor() {
-        super();
-        this.LoadPage = this.LoadPage.bind(this);
-        this.state = {
-            page:1
-        }
+    state = {
+        page:1
     }
-    LoadPage(page) {
+    LoadPage = (page) => {
         setTimeout(() => 
             this.setState({page:page})
         ,500);

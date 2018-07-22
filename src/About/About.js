@@ -2,20 +2,19 @@ import React, { Component } from 'react';
 import './About.css'
 
 class About extends Component {
+    state = {
+        AboutMe:false
+    }
     constructor(props) {
         super(props);
-        this.Start = this.Start.bind(this);
-        this.state = {
-            AboutMe:false
-        }
         this.addTimeout = props.addTimeout;
     }
-    Start() {
+    Start = () => {
         const start = document.getElementsByClassName('start')[0];
         start.style.opacity = '0';
         start.style.width = '0px';
         start.style.height = '0px';
-        start.style.top = '50%';
+        start.style.top = '0px';
         start.style.fontSize = '0px';
         const startCircle = document.getElementsByClassName('startCircle')[0];
         startCircle.style.opacity = '0';
@@ -27,8 +26,9 @@ class About extends Component {
     render() {
         return (
             <section className = 'background'>
-                <div className = 'startCircle'></div>
-                <button className = 'start' onClick = {this.Start}>Me</button> 
+                <div className = 'startCircle'>
+                    <button className = 'start' onClick = {this.Start}>Me</button> 
+                </div>
                 {this.state.AboutMe &&
                     <AboutMe addTimeout = {this.addTimeout}/>
                 }
@@ -42,7 +42,7 @@ class AboutMe extends Component {
         this.componentDidMount = this.componentDidMount.bind(this);
         this.addTimeout = props.addTimeout;
     }
-    componentDidMount() {
+    componentDidMount = () => {
         const addTimeout = this.addTimeout;
         const me = document.getElementsByClassName('me');
         let delay = 0;
