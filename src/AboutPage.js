@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Nav from './Nav/Nav.js';
 import About from './About/About.js';
+import Links from './Links/Links.js'
 import './About/AboutPage.css'
 
 class AboutPage extends Component {
@@ -43,7 +44,8 @@ class AboutPage extends Component {
         return (
             <section className = 'website'>
                 <Nav active = {this.state.active} onClick = {this.onClick}/>
-                <About addTimeout = {this.addTimeout}/>            
+                <About addTimeout = {this.addTimeout}/>   
+                <Links/>         
                 <div className = 'slider'></div>
             </section>
         );

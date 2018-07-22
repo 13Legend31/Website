@@ -105,15 +105,15 @@ class AboutMe extends Component {
             <section className = 'aboutMe'>
                 <div className = 'me'>Hi!</div>
                 <div className = 'me'>My name is Larry</div>
-                <div className = 'me'>I'm a Front End Engineer</div>
+                <div className = 'me'>I'm a Software Developer</div>
                 <div className = 'me' id = 'specialize'>My skills are 
-                    <div className = 'underline'></div>   
-                    <div className = 'spec' id = 'html'>HTML</div>
-                    <div className = 'spec' id = 'css'>CSS</div>
+                    <div className = 'underline'></div>                       
                     <div className = 'spec' id = 'javascript'>Javascript</div>
                     <div className = 'spec' id = 'react'>React</div>
                     <div className = 'spec' id = 'node'>Node</div>
                     <div className = 'spec' id = 'sql'>SQL</div>
+                    <div className = 'spec' id = 'html'>HTML</div>
+                    <div className = 'spec' id = 'css'>CSS</div>
                 </div>
                 <div className = 'me' id = 'interest'>My interests are
                     <div className = 'underline'></div>   

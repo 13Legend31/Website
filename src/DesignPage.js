@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Nav from './Nav/Nav';
 import Design from './Designs/Design'
+import Links from './Links/Links.js'
 import './Designs/DesignPage.css'
 
 class DesignPage extends Component {
@@ -34,6 +35,7 @@ class DesignPage extends Component {
             <section className = 'website'>
                 <Nav active = {this.state.active} onClick = {this.onClick}/>
                 <Design/>
+                <Links/>
                 <div className = 'slider'></div>
             </section>
         );
