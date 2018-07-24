@@ -76,7 +76,7 @@ class AboutMe extends Component {
                         key.textContent += json[i][j];
                     },delay));
                 })(j);
-                delay += 50;
+                delay += 15;
                 j++;
             }
             // colon
@@ -84,7 +84,7 @@ class AboutMe extends Component {
             colon.className = 'colon';
             mid.appendChild(colon);
             addTimeout(setTimeout(() => colon.textContent = ':', delay));
-            delay += 50;
+            delay += 15;
             j++;
             // val
             const val = document.createElement('span');
@@ -96,7 +96,7 @@ class AboutMe extends Component {
                         val.textContent += json[i][j];
                     },delay));
                 })(j);
-                delay += 50;
+                delay += 15;
                 j++;
             }
             addTimeout(setTimeout(() => val.textContent += '\r\n',delay));
