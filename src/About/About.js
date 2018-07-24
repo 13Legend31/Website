@@ -39,91 +39,80 @@ class About extends Component {
 class AboutMe extends Component {
     constructor(props) {
         super(props);
-        this.componentDidMount = this.componentDidMount.bind(this);
         this.addTimeout = props.addTimeout;
     }
     componentDidMount = () => {
         const addTimeout = this.addTimeout;
-        const me = document.getElementsByClassName('me');
-        let delay = 0;
-        // Hi to I'm a front end engineer
-        for (let i = 0; i < 3; i++) {
-            addTimeout(setTimeout(() => me[i].style.opacity = '1', delay));
-            delay += 1200;
-            addTimeout(setTimeout(() => me[i].style.opacity = '0', delay));
-            delay += 700;
-        }
-        // I specialize in 
-        const spec = document.getElementsByClassName('spec');
-        // Underline
-        const underline = document.getElementsByClassName('underline');        
-        addTimeout(setTimeout(() => { 
-            me[3].style.opacity = '1'; 
-            underline[0].style.width = '100%';
+        const json = [
+            '"name":"Larry Wu",',
+            '"occupation":"Software Developer",',
+            '"skills":"JavaScript, React, Node, SQL, HTML, CSS, C++, Git",',
+            '"education":"University of Toronto",',
+            '"degree":"Bachelors of Commerce",',
+            '"email":"larrywu1996@gmail.com",',
+            '"message":"Feel free to contact me at any time!"'
+        ]
+
+        const open = document.getElementsByClassName('open')[0];
+        const mid = document.getElementsByClassName('mid')[0];
+        const close = document.getElementsByClassName('close')[0];
+        let delay = 400;
+        addTimeout(setTimeout(() => {
+            open.textContent = '{';
+            close.textContent = '}';
         }, delay));
-        delay += 700;
-        for (let i = 0; i < spec.length; i++) {
-            addTimeout(setTimeout(() => spec[i].style.opacity = '1', delay));
-            delay += 1000;
-        }
-        addTimeout(setTimeout(() => {
-                me[3].style.opacity = '0';
-                for (let i = 0; i < spec.length; i++) {
-                    spec[i].style.opacity = '0';
-                }
-            },delay)
-        );
-        delay += 700;
-        // My interests
-        const interests = document.getElementsByClassName('interests');
-        addTimeout(setTimeout(() => {
-            me[4].style.opacity = '1'
-            underline[1].style.width = '100%';
-        }, delay));
-        delay += 700;
-        for (let i = 0; i < interests.length; i++) {
-            addTimeout(setTimeout(() => interests[i].style.opacity = '1', delay));
-            delay += 1000;
-        }
-        addTimeout(setTimeout(() => {
-                me[4].style.opacity = '0';
-                for (let i = 0; i < interests.length; i++) {
-                    interests[i].style.opacity = '0';
-                }
-            },delay)
-        );
-        delay += 700;
-        // Contact me
-        addTimeout(setTimeout(() => me[5].style.opacity = '1', delay));
-        delay += 1300;
-        const email = document.getElementsByClassName('email')[0];
-        addTimeout(setTimeout(() => email.style.opacity = '1', delay));
-        delay += 1200;
+
+        for (let i = 0; i < json.length; i++) {
+            delay += 400;
+            // key
+            const key = document.createElement('span');
+            key.className = 'key';
+            key.textContent = '   ';
+            mid.appendChild(key);
+            let j = 0;
+            while (json[i][j] !== ':') {
+                (function(j) {
+                    addTimeout(setTimeout(() => {
+                        key.textContent += json[i][j];
+                    },delay));
+                })(j);
+                delay += 50;
+                j++;
+            }
+            // colon
+            const colon = document.createElement('span');
+            colon.className = 'colon';
+            mid.appendChild(colon);
+            addTimeout(setTimeout(() => colon.textContent = ':', delay));
+            delay += 50;
+            j++;
+            // val
+            const val = document.createElement('span');
+            val.className = 'val';
+            mid.appendChild(val);
+            while (j < json[i].length) {
+                (function(j) {
+                    addTimeout(setTimeout(() => {
+                        val.textContent += json[i][j];
+                    },delay));
+                })(j);
+                delay += 50;
+                j++;
+            }
+            addTimeout(setTimeout(() => val.textContent += '\r\n',delay));
+        }        
     }
     render() {
         return (
-            <section className = 'aboutMe'>
-                <div className = 'me'>Hi!</div>
-                <div className = 'me'>My name is Larry</div>
-                <div className = 'me'>I'm a Software Developer</div>
-                <div className = 'me' id = 'specialize'>My skills are 
-                    <div className = 'underline'></div>                       
-                    <div className = 'spec' id = 'javascript'>Javascript</div>
-                    <div className = 'spec' id = 'react'>React</div>
-                    <div className = 'spec' id = 'node'>Node</div>
-                    <div className = 'spec' id = 'sql'>SQL</div>
-                    <div className = 'spec' id = 'html'>HTML</div>
-                    <div className = 'spec' id = 'css'>CSS</div>
-                </div>
-                <div className = 'me' id = 'interest'>My interests are
-                    <div className = 'underline'></div>   
-                    <div className = 'interests' id = 'ml'>Machine Learning</div>
-                    <div className = 'interests' id = 'software'>Software Development</div>
-                    <div className = 'interests' id = 'opensrc'>Open Source</div>
-                </div>
-                <div className = 'me'>If you would like to contact me, please feel free to do so at anytime!</div>
-                <div className = 'email'>larrywu1996@gmail.com</div>
-            </section>
+        <section className = 'textEditor'>
+            <div className = 'top'>ME.json</div>
+            <code className = 'code'> 
+                <div className = 'open'>{}</div>
+                <div className = 'mid'></div>
+                <div className ='close'></div>
+            </code>
+            <div className = 'bottom'></div>
+        </section>
         );
     }
 }
