@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import './Nav.css';
+import React, {Component} from 'react'
+import './Nav.css'
 
 const barActive = {
     width:'100%',
@@ -37,10 +37,11 @@ const buttonInfo = [
         key:2
     }
 ]
+
 function Nav(props) {
     return <nav className='nav'>
-        {buttonInfo.map((item) => {
-            const { name,key } = item
+        {buttonInfo.map((info) => {
+            const { name,key } = info
             return <Button name={name} num={key} page={props.page} LoadPage={() => props.LoadPage(key)} key={key}/>
         })}
     </nav>
@@ -50,12 +51,15 @@ class Button extends Component {
     state = {
         hover:false
     }
+
     Hover = () => {
-        this.setState({hover:true});
+        this.setState({hover:true})
     }
+
     Unhover = () => {
-        this.setState({hover:false});
+        this.setState({hover:false})
     }
+
     ChooseStyle = () => {
         if (this.props.page === this.props.num) {
             return [barActive, nameActive]
@@ -65,6 +69,7 @@ class Button extends Component {
             return [barInactive, nameInactive]
         }
     }
+    
     render() { 
         const styles = this.ChooseStyle()
         const barStyle = styles[0],

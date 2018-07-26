@@ -4,7 +4,7 @@ import Portfolio from './Images/Portfolio.jpg'
 import ImageCollector from './Images/ImageCollector.jpg'
 import ThisWebsite from './Images/ThisWebsite.jpg'
 import MoreComingSoon from './Images/MoreComingSoon.jpg'
-import './ProjectsPage.css'
+import './Projects.css'
 
 const projects = [
     {
@@ -42,8 +42,8 @@ const projects = [
 function ProjectsPage(){
     return  <div className = 'wrapper'>
                 <section className = 'projects'>
-                    {projects.map((item) => {
-                        const { name, src, url, key } = item;
+                    {projects.map((info) => {
+                        const { name, src, url, key } = info;
                         return(
                             <Frame name={name} src={src} URL={url} key={key}/>
                         );

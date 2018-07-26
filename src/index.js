@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import ReactDom from 'react-dom'
 import Nav from './Components/Nav/Nav.js'
 import Links from './Components/Links/Links.js'
-import AboutPage from './Pages/About/AboutPage.js'
-import ProjectsPage from './Pages/Projects/ProjectsPage.js'
+import About from './Pages/About/About.js'
+import Projects from './Pages/Projects/Projects.js'
 import './index.css'
 
 class Website extends Component {
@@ -20,25 +20,27 @@ class Website extends Component {
     }
 
     LoadPage = (page) => {
-        const slider = document.getElementsByClassName('slider')[0];
-        slider.style.width = '100%';
-        slider.style.left = '0';
-        setTimeout(() => {
-            this.setState({page:page});
-            slider.style.width = '0%';
-            slider.style.left = '100%';
-        },500);
+        if (this.state.page !== page) {
+            const slider = document.getElementsByClassName('slider')[0]
+            slider.style.width = '100%'
+            slider.style.left = '0'
+            setTimeout(() => {
+                slider.style.width = '0%'
+                slider.style.left = '100%'
+                this.setState({page:page})
+            },500);
+        }
     }
-    
+
     render() {
         return (
             <React.Fragment> 
                 <Nav page = {this.state.page} LoadPage = {this.LoadPage}/>
                 {this.state.page === 1 &&   
-                    <AboutPage page={this.state.page}/>      
+                    <About page={this.state.page}/>      
                 }     
                 {this.state.page === 2 &&
-                    <ProjectsPage/>
+                    <Projects/>
                 }
                 <Links/>
                 <div className = 'slider'></div>

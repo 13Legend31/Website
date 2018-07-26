@@ -18,8 +18,8 @@ const imgInfo = [
 
 function Links() {
     return <section className = 'links'>
-    {imgInfo.map((item) => {
-        const { src, href, key } = item
+    {imgInfo.map((info) => {
+        const { src, href, key } = info
         return <img className='icon' src={src} alt='' onClick={() => window.open(href)} onDragStart={(e) => e.preventDefault()} key={key}></img>
     })}
     </section>
