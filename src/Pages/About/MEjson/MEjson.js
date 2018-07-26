@@ -1,51 +1,11 @@
 import React, { Component } from 'react';
-import './About.css'
+import './MEjson.css'
 
-class About extends Component {
-    state = {
-        AboutMe:false
-    }
-    constructor(props) {
-        super(props);
-        this.addTimeout = props.addTimeout;
-    }
-    Start = () => {
-        const start = document.getElementsByClassName('start')[0];
-        start.style.opacity = '0';
-        start.style.width = '0px';
-        start.style.height = '0px';
-        start.style.top = '0px';
-        start.style.fontSize = '0px';
-        const startCircle = document.getElementsByClassName('startCircle')[0];
-        startCircle.style.opacity = '0';
-        startCircle.style.width = '0px';
-        startCircle.style.height = '0px';
-        startCircle.style.top = '50%';
-        setTimeout(() => this.setState({AboutMe:true}), 800);
-    }
-    render() {
-        return (
-            <section className = 'background'>
-                <div className = 'startCircle'>
-                    <button className = 'start' onClick = {this.Start}>Me</button> 
-                </div>
-                {this.state.AboutMe &&
-                    <AboutMe addTimeout = {this.addTimeout}/>
-                }
-            </section>
-        );
-    }
-}
-class AboutMe extends Component {
+class MEjson extends Component {
     state = {
         rush:false
     }
-    constructor(props) {
-        super(props);
-        this.addTimeout = props.addTimeout;
-    }
     componentDidMount = () => {
-        const addTimeout = this.addTimeout;
         const json = [
             '"name":"Larry Wu",',
             '"occupation":"Software Developer",',
@@ -60,11 +20,12 @@ class AboutMe extends Component {
         const close = document.getElementsByClassName('close')[0];
         open.textContent = '{}';
         let delay = 400;
-        addTimeout(setTimeout(() => {
+        setTimeout(() => {
             open.textContent = '{';
             close.textContent = '}';
-        }, delay));
+        }, delay);
 
+        // json.forEach((item) => {})
         for (let i = 0; i < json.length; i++) {
             delay += 400;
             // key
@@ -75,9 +36,9 @@ class AboutMe extends Component {
             let j = 0;
             while (json[i][j] !== ':') {
                 (function(j) {
-                    addTimeout(setTimeout(() => {
+                    setTimeout(() => {
                         key.textContent += json[i][j];
-                    },delay));
+                    },delay);
                 })(j);
                 delay += 15;
                 j++;
@@ -86,7 +47,7 @@ class AboutMe extends Component {
             const colon = document.createElement('span');
             colon.className = 'colon';
             mid.appendChild(colon);
-            addTimeout(setTimeout(() => colon.textContent = ':', delay));
+            setTimeout(() => colon.textContent = ':', delay);
             delay += 15;
             j++;
             // val
@@ -95,14 +56,14 @@ class AboutMe extends Component {
             mid.appendChild(val);
             while (j < json[i].length) {
                 (function(j) {
-                    addTimeout(setTimeout(() => {
+                    setTimeout(() => {
                         val.textContent += json[i][j];
-                    },delay));
+                    },delay);
                 })(j);
                 delay += 15;
                 j++;
             }
-            addTimeout(setTimeout(() => val.textContent += '\r\n',delay));
+            setTimeout(() => val.textContent += '\r\n',delay);
         }        
     }
     Rush = () => {
@@ -143,4 +104,4 @@ class AboutMe extends Component {
     }
 }
 
-export default About;
+export default MEjson

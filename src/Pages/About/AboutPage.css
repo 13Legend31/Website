@@ -1,0 +1,43 @@
+.background {
+    width:100vw;
+    height:100vh;
+    box-sizing:border-box;
+    background:#161617;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    overflow:hidden;
+}
+.startCircle {
+    position:relative;
+    top:37.5%;
+    height:250px;
+    width:250px;
+    border-radius:50%;
+    font-size:72px;
+    font-family:sans-serif;
+    font-weight:700;
+    background-image:url('Images/dog.jpg');
+    background-position:center;
+    transition:0.5s;
+    display:flex;
+    justify-content: center;
+}
+.start {
+    position:relative;
+    top:25px;
+    height:200px;
+    width:200px;
+    border-radius:50%;
+    font-size:72px;
+    font-family:sans-serif;
+    font-weight:700;
+    transition:0.5s;
+    z-index:2;
+    cursor:pointer;
+}
+.start:hover {
+    color:white;
+    background-color:red;
+    font-size:0px;
+}

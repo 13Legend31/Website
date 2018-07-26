@@ -1,18 +1,18 @@
-.elemsWrapper {
+.wrapper {
     position:relative;
     top:200px;
     width:100%;
     display:flex;
     justify-content: center;
 }
-.designSection {
+.projects {
     position:relative;
     width:50%;
     display:flex;
     justify-content: center;
     flex-wrap:wrap;    
 }
-.element {
+.frame {
     width:200px;
     height:200px;
     box-sizing:border-box;
@@ -23,7 +23,7 @@
     cursor:pointer;
     transition:0.5s;
 }
-.elemName {
+.frameName {
     position:relative;
     top:84%;
     width:100%;
@@ -37,28 +37,28 @@
     text-align:center;
     transition:0.5s;
 }
-.element:hover {
+.frame:hover {
     transform: scale(1.2) rotate(10deg);
 }
-.element:hover .elemName {
+.frame:hover .frameName {
     opacity:1;
     height:20%;
     top:80%;
     font-size:28px;
 }
 @media (min-width: 768px) and (max-width: 1280px) {
-    .elemName {
+    .frameName {
         font-size:20px;
     }
-    .element:hover .elemName {
+    .frame:hover .frameName {
         font-size:24px;
     }
 }
 @media (min-width: 320px) and (max-width: 767px) {
-    .elemName {
+    .frameName {
         font-size:16px;
     }
-    .element:hover .elemName {
+    .frame:hover .frameName {
         font-size:20px;
     }
 }

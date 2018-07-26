@@ -1,0 +1,66 @@
+import React from 'react';
+import RhythmTrack from './Images/RhythmTrack.jpg'
+import Portfolio from './Images/Portfolio.jpg'
+import ImageCollector from './Images/ImageCollector.jpg'
+import ThisWebsite from './Images/ThisWebsite.jpg'
+import MoreComingSoon from './Images/MoreComingSoon.jpg'
+import './ProjectsPage.css'
+
+const projects = [
+    {
+        name: 'Rhythm Track',
+        src: RhythmTrack,
+        url: 'https://github.com/13Legend31/RhythmTrack',
+        key:1
+    },
+    {
+        name: 'Portfolio',
+        src: Portfolio,
+        url: 'https://github.com/13Legend31/Previous-Website',
+        key:2
+    },
+    {
+        name: 'Rhythm Track',
+        src: ImageCollector,
+        url: 'https://github.com/13Legend31/Image-Collector',
+        key:3
+    },
+    {
+        name: 'Rhythm Track',
+        src: ThisWebsite,
+        url: 'https://github.com/13Legend31/RhythmTrack',
+        key:4
+    },
+    {
+        name: 'Rhythm Track',
+        src: MoreComingSoon,
+        url: undefined,
+        key:5
+    },
+];
+
+function ProjectsPage(){
+    return  <div className = 'wrapper'>
+                <section className = 'projects'>
+                    {projects.map((item) => {
+                        const { name, src, url, key } = item;
+                        return(
+                            <Frame name={name} src={src} URL={url} key={key}/>
+                        );
+                    })}
+                </section>
+            </div>   
+}
+
+function Frame(props) {
+    return <div className = 'frame' style = {{backgroundImage:`url(${props.src})`}} 
+    onClick={() => {
+        if (props.URL) {
+            window.open(props.URL)
+        }
+    }}>
+        <div className = 'frameName'>{props.name}</div>
+    </div>
+}
+
+export default ProjectsPage;
