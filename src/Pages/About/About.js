@@ -19,7 +19,7 @@ class About extends Component {
         startCircle.width = '0px'
         startCircle.height = '0px'
         startCircle.top = '50%'
-        setTimeout(() => this.setState({AboutMe:true}), 800)
+        setTimeout(() => this.setState({MEjson:true}), 800)
     }
 
     render() {
@@ -28,7 +28,7 @@ class About extends Component {
                 <div className = 'startCircle'>
                     <button className = 'start' onClick = {this.Start}>Me</button> 
                 </div>
-                {this.state.AboutMe &&
+                {this.state.MEjson &&
                     <MEjson/>
                 }
             </section>  
