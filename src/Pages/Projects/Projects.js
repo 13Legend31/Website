@@ -20,19 +20,19 @@ const projects = [
         key:2
     },
     {
-        name: 'Rhythm Track',
+        name: 'Image Collector',
         src: ImageCollector,
         url: 'https://github.com/13Legend31/Image-Collector',
         key:3
     },
     {
-        name: 'Rhythm Track',
+        name: 'This Website',
         src: ThisWebsite,
         url: 'https://github.com/13Legend31/RhythmTrack',
         key:4
     },
     {
-        name: 'Rhythm Track',
+        name: 'More Coming!',
         src: MoreComingSoon,
         url: undefined,
         key:5

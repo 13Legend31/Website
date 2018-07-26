@@ -62,3 +62,11 @@
         font-size:20px;
     }
 }
+@media (max-width:319px) {
+    .frameName {
+        font-size:12px;
+    }
+    .frame:hover .frameName {
+        font-size:16px;
+    }
+}
