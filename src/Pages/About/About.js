@@ -7,11 +7,6 @@ class About extends Component {
         MEjson:false
     }
 
-    constructor(props) {
-        super(props)
-        this.timeouts = []
-    }
-
     Start = () => {
         const { style: start } = document.getElementsByClassName('start')[0]
         start.opacity = '0'
@@ -34,7 +29,7 @@ class About extends Component {
                     <button className = 'start' onClick = {this.Start}>Me</button> 
                 </div>
                 {this.state.AboutMe &&
-                    <MEjson addTimeout = {this.addTimeout}/>
+                    <MEjson/>
                 }
             </section>  
         );
