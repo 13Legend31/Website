@@ -39,7 +39,7 @@ const projects = [
     },
 ];
 
-function ProjectsPage(){
+function Projects(){
     return  <div className = 'wrapper'>
                 <section className = 'projects'>
                     {projects.map((info) => {
@@ -63,4 +63,4 @@ function Frame(props) {
     </div>
 }
 
-export default ProjectsPage;
+export default Projects;
