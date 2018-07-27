@@ -6,28 +6,38 @@ import About from './Pages/About/About.js'
 import Projects from './Pages/Projects/Projects.js'
 import './index.css'
 
+const slideIn = {
+    width:'100%',
+    left:'0%'
+}
+
+const slideOut = {
+    width:'0%',
+    left:'100%'
+}
+
 class Website extends Component {
     state = {
-        page:1
+        page:1,
+        slideStyle:null
     }
 
     componentDidMount = () => {
         setTimeout(() => {
-            const { style:slider} = document.getElementsByClassName('slider')[0];
-            slider.width = '0%';
-            slider.left = '100%';
-        },200);
+            this.setState({page:1, slideStyle:slideOut})
+        });
     }
 
     LoadPage = (page) => {
         if (this.state.page !== page) {
-            const slider = document.getElementsByClassName('slider')[0]
-            slider.style.width = '100%'
-            slider.style.left = '0'
+            this.setState({
+                slideStyle:slideIn
+            })
             setTimeout(() => {
-                slider.style.width = '0%'
-                slider.style.left = '100%'
-                this.setState({page:page})
+                this.setState({
+                    page:page,
+                    slideStyle:slideOut
+                })
             },500);
         }
     }
@@ -43,7 +53,7 @@ class Website extends Component {
                     <Projects/>
                 }
                 <Links/>
-                <div className = 'slider'></div>
+                <div className = 'slider' style={this.state.slideStyle}></div>
             </React.Fragment>
         );
     }

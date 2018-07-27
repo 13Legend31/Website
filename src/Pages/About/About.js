@@ -2,31 +2,41 @@ import React, {Component} from 'react'
 import MEjson from './MEjson/MEjson.js'
 import './About.css'
 
+const startCircleClick = {
+    opacity:'0',
+    width:'0',
+    height:'0',
+    top:'50%'
+}
+
+const startClick = {
+    opacity:'0',
+    width:'0',
+    height:'0',
+    top:'0',
+    fontSize:'0'
+}
+
 class About extends Component {
     state = {
-        MEjson:false
+        MEjson:false,
+        startCircleStyle:null,
+        startStyle:null
     }
 
     Start = () => {
-        const { style: start } = document.getElementsByClassName('start')[0]
-        start.opacity = '0'
-        start.width = '0px'
-        start.height = '0px'
-        start.top = '0px'
-        start.fontSize = '0px'
-        const { style:startCircle } = document.getElementsByClassName('startCircle')[0]
-        startCircle.opacity = '0'
-        startCircle.width = '0px'
-        startCircle.height = '0px'
-        startCircle.top = '50%'
+        this.setState({
+            startCircleStyle:startCircleClick,
+            startStyle:startClick
+        })
         setTimeout(() => this.setState({MEjson:true}), 800)
     }
 
     render() {
         return (
-            <section className = 'background'>
-                <div className = 'startCircle'>
-                    <button className = 'start' onClick = {this.Start}>Me</button> 
+            <section className='background'>
+                <div className='startCircle' style={this.state.startCircleStyle}>
+                    <button className='start' onClick={this.Start} style={this.state.startStyle}>Me</button> 
                 </div>
                 {this.state.MEjson &&
                     <MEjson/>
