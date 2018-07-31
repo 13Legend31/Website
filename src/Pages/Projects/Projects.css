@@ -1,13 +1,13 @@
 .wrapper {
     position:relative;
-    top:200px;
+    top:225px;
     width:100%;
     display:flex;
     justify-content: center;
 }
 .projects {
     position:relative;
-    width:50%;
+    width:75%;
     display:flex;
     justify-content: center;
     flex-wrap:wrap;    
@@ -34,7 +34,9 @@
     font-size:24px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight:600;
-    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
     transition:0.5s;
 }
 .frame:hover {

@@ -10,15 +10,30 @@
 }
 body {
     background:#161617;
+    min-width:100vw;
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    overflow-x:hidden;
 }
 .slider {
     position:absolute;
     top:0%;
+    left:0;
     height:100%; 
     width:100%;
-    left:0;
     background-color: #1C1C1C;
     transition:0.5s;
     box-sizing: border-box;
     z-index:2;
+}
+.particles {
+    position:absolute;
+    z-index:-2;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
 }

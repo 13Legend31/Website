@@ -34,14 +34,14 @@ class About extends Component {
 
     render() {
         return (
-            <section className='background'>
+            <React.Fragment>
                 <div className='startCircle' style={this.state.startCircleStyle}>
                     <button className='start' onClick={this.Start} style={this.state.startStyle}>Me</button> 
                 </div>
                 {this.state.MEjson &&
                     <MEjson/>
                 }
-            </section>  
+            </React.Fragment>  
         );
     }
 }

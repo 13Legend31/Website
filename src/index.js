@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
 import ReactDom from 'react-dom'
+import './index.css'
+
 import Nav from './Components/Nav/Nav.js'
 import Links from './Components/Links/Links.js'
 import About from './Pages/About/About.js'
 import Projects from './Pages/Projects/Projects.js'
-import './index.css'
+import Particles from 'react-particles-js'
 
 const slideIn = {
     width:'100%',
@@ -53,6 +55,20 @@ class Website extends Component {
                     <Projects/>
                 }
                 <Links/>
+                <Particles className='particles' params={{
+                    particles: {
+                        nb: 80
+                        },
+                        interactivity: {
+                        events: {
+                            onresize: {
+                            enable: true,
+                            density_auto: true,
+                            density_area: 400
+                            }
+                        }
+                    }
+                }}/>
                 <div className = 'slider' style={this.state.slideStyle}></div>
             </React.Fragment>
         );
