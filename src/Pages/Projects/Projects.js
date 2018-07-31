@@ -28,7 +28,7 @@ const projects = [
     {
         name: 'This Website',
         src: ThisWebsite,
-        url: 'https://github.com/13Legend31/RhythmTrack',
+        url: 'https://github.com/13Legend31/Website',
         key:4
     },
     {
