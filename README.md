@@ -1,4 +1,4 @@
 # Website
-Built on React with create-react-app
+Built on React
 
 source files in ./src
