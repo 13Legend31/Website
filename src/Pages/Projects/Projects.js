@@ -1,6 +1,5 @@
 import React from 'react';
 import RhythmTrack from './Images/RhythmTrack.jpg'
-import Portfolio from './Images/Portfolio.jpg'
 import ImageCollector from './Images/ImageCollector.jpg'
 import ThisWebsite from './Images/ThisWebsite.jpg'
 import MoreComingSoon from './Images/MoreComingSoon.jpg'
@@ -14,28 +13,22 @@ const projects = [
         key:1
     },
     {
-        name: 'Portfolio',
-        src: Portfolio,
-        url: 'https://github.com/13Legend31/Previous-Website',
-        key:2
-    },
-    {
         name: 'Image Collector',
         src: ImageCollector,
         url: 'https://github.com/13Legend31/Image-Collector',
-        key:3
+        key:2
     },
     {
         name: 'This Website',
         src: ThisWebsite,
         url: 'https://github.com/13Legend31/Website',
-        key:4
+        key:3
     },
     {
         name: 'More Coming!',
         src: MoreComingSoon,
         url: undefined,
-        key:5
+        key:4
     },
 ];
 

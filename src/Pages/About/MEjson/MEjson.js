@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MEjson.css'
+import './Mejson.css'
 
 const jsonME = [
     {
@@ -48,7 +48,7 @@ function Type(span, text, delay) { // delay is passed by reference
     }
 }
 
-class MEjson extends Component {
+class Mejson extends Component {
     state = {
         rush:false
     }
@@ -93,7 +93,7 @@ class MEjson extends Component {
     render() {
         return (
         <section className = 'textEditor' onClick = {this.Rush}>
-            <div className = 'top'>ME.json</div>
+            <div className = 'top'>Me.json</div>
             <code className = 'code'> 
                 {!this.state.rush &&
                     <React.Fragment>
@@ -126,4 +126,4 @@ class MEjson extends Component {
     }
 }
 
-export default MEjson
+export default Mejson

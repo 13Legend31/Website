@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import MEjson from './MEjson/MEjson.js'
+import Mejson from './Mejson/Mejson.js'
 import './About.css'
 
 const startCircleClick = {
@@ -39,7 +39,7 @@ class About extends Component {
                     <button className='start' onClick={this.Start} style={this.state.startStyle}>Me</button> 
                 </div>
                 {this.state.MEjson &&
-                    <MEjson/>
+                    <Mejson/>
                 }
             </React.Fragment>  
         );
