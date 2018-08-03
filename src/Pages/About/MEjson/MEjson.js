@@ -14,7 +14,7 @@ const jsonME = [
     },
     {
         key:'   "skills"',
-        val:'"JavaScript, React, Node, SQL, HTML, CSS, C++, Git",',
+        val:'"React, React Native, Redux, Express, SQL, C/C++",',
         k:3
     },
     {
@@ -106,9 +106,8 @@ class Mejson extends Component {
                     <React.Fragment>
                         <div className = 'open'>{'{'}</div>
                         <div className = 'mid'>
-                        {jsonME.map((obj) => {
-                            const { key, val, k } = obj
-                            return <React.Fragment key={k}>
+                        {jsonME.map(({ key, val }, index) => {
+                            return <React.Fragment key={index}>
                                         <span className='key'>{key}</span>
                                         <span className='colon'>:</span>
                                         <span className='val'>{val}</span>
