@@ -5,37 +5,30 @@ const jsonME = [
     {
         key:'   "name"',
         val:'"Larry Wu",',
-        k:1
     },
     {
         key:'   "occupation"',
         val:'"Front End Engineer",',
-        k:2
     },
     {
         key:'   "skills"',
         val:'"React, React Native, Redux, Express, SQL, C/C++",',
-        k:3
     },
     {
         key:'   "education"',
         val:'"University of Toronto",',
-        k:4
     },
     {
         key:'   "degree"',
         val:'"Bachelors of Commerce",',
-        k:5
     },
     {
         key:'   "email"',
         val:'"larrywu1996@gmail.com",',
-        k:6
     },
     {
         key:'   "message"',
         val:'"Feel free to contact me at any time!"',
-        k:7
     }
 ]
 
