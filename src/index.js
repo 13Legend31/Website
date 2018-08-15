@@ -2,11 +2,14 @@ import React, {Component} from 'react'
 import ReactDom from 'react-dom'
 import './index.css'
 
-import Nav from './Components/Nav/Nav.js'
-import Links from './Components/Links/Links.js'
-import About from './Pages/About/About.js'
-import Projects from './Pages/Projects/Projects.js'
+import Nav from './Components/Nav/Nav'
+import Links from './Components/Links/Links'
 import Particles from 'react-particles-js'
+
+import About from './Pages/About/About'
+import Projects from './Pages/Projects/Projects'
+import Algorithms from './Pages/Algorithms/Algorithms'
+import ContactMe from './Pages/ContactMe/ContactMe'
 
 const slideIn = {
     width:'100%',
@@ -46,13 +49,19 @@ class Website extends Component {
 
     render() {
         return (
-            <React.Fragment> 
+            <React.Fragment>
                 <Nav page = {this.state.page} LoadPage = {this.LoadPage}/>
                 {this.state.page === 1 &&   
                     <About page={this.state.page}/>      
                 }     
                 {this.state.page === 2 &&
                     <Projects/>
+                }
+                {this.state.page === 3 &&
+                    <Algorithms/>
+                }
+                {this.state.page === 4 &&
+                    <ContactMe/>
                 }
                 <Links/>
                 <Particles className='particles' params={{
@@ -69,7 +78,7 @@ class Website extends Component {
                         }
                     }
                 }}/>
-                <div className = 'slider' style={this.state.slideStyle}></div>
+                <div className = 'slider' style={this.state.slideStyle}/>
             </React.Fragment>
         );
     }

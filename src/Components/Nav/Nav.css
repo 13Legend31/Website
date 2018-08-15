@@ -8,6 +8,10 @@
     display:flex;
     justify-content: center;
     z-index:1;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .nav:hover {
     height:170px;
@@ -27,6 +31,10 @@
     top:50%;
     transform:translateY(-50%);
     z-index:1;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .bar {
     position:relative;

@@ -23,10 +23,6 @@ const jsonME = [
         val:'"Bachelors of Commerce",',
     },
     {
-        key:'   "email"',
-        val:'"larrywu1996@gmail.com",',
-    },
-    {
         key:'   "message"',
         val:'"Feel free to contact me at any time!"',
     }
@@ -57,7 +53,7 @@ class Mejson extends Component {
 
         let delay = {delay:800} // Pass By Reference
         const mid = document.getElementsByClassName('mid')[0];
-        jsonME.map((obj) => {
+        jsonME.forEach((obj) => {
             const { key, val } = obj
             const keySpan = document.createElement('span')
                   keySpan.className = 'key'

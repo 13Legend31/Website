@@ -32,19 +32,6 @@ const projects = [
     },
 ];
 
-function Projects(){
-    return  <div className = 'wrapper'>
-                <section className = 'projects'>
-                    {projects.map((info) => {
-                        const { name, src, url, key } = info;
-                        return(
-                            <Frame name={name} src={src} URL={url} key={key}/>
-                        );
-                    })}
-                </section>
-            </div>   
-}
-
 function Frame(props) {
     return <div className = 'frame' style = {{backgroundImage:`url(${props.src})`}} 
     onClick={() => {
@@ -54,6 +41,19 @@ function Frame(props) {
     }}>
         <div className = 'frameName'>{props.name}</div>
     </div>
+}
+
+function Projects(){
+    return  <section className='wrapper'>    
+                <div className = 'projects'>
+                    {projects.map((info) => {
+                        const { name, src, url, key } = info;
+                        return(
+                            <Frame name={name} src={src} URL={url} key={key}/>
+                        );
+                    })}
+                </div>
+            </section>
 }
 
 export default Projects;

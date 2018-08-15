@@ -1,11 +1,8 @@
 .textEditor {
-    position:relative;
-    top:50%;
-    transform:translateY(-50%);
     box-sizing:border-box;
     border:1px solid #1D252F;
     width:700px;
-    height:220px;
+    height:200px;
 }
 .top {
     width:100%;

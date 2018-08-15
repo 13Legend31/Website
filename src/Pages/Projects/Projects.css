@@ -1,16 +1,16 @@
 .wrapper {
-    position:relative;
+    position:absolute;
     top:225px;
     width:100%;
     display:flex;
     justify-content: center;
+    align-items: center;
 }
 .projects {
-    position:relative;
-    width:75%;
+    width:50%;
     display:flex;
     justify-content: center;
-    flex-wrap:wrap;    
+    flex-wrap:wrap;
 }
 .frame {
     width:200px;
@@ -36,7 +36,7 @@
     font-weight:600;
     display:flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     transition:0.5s;
 }
 .frame:hover {
@@ -66,9 +66,9 @@
 }
 @media (max-width:319px) {
     .frameName {
-        font-size:12px;
+        font-size:8px;
     }
     .frame:hover .frameName {
-        font-size:16px;
+        font-size:12px;
     }
 }

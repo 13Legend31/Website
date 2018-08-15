@@ -3,19 +3,19 @@
     padding:0;
     border:none;
     outline:none;
-    user-select:none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
 }
 body {
     background:#161617;
-    min-width:100vw;
+    width:100vw;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+#root {
+    width:100vw;
     min-height:100vh;
     display:flex;
     justify-content: center;
-    align-content:center;
-    overflow-x:hidden;
+    align-items:center;
 }
 .slider {
     position:absolute;
@@ -29,8 +29,8 @@ body {
     z-index:2;
 }
 .particles {
-    position:absolute;
-    z-index:-2;
+    position:fixed;
+    z-index:-1;
     left:0;
     top:0;
     width:100vw;

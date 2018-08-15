@@ -13,6 +13,10 @@
     margin:10px;
     border-radius:50%;
     cursor:pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .icon:hover {
     width:50px;

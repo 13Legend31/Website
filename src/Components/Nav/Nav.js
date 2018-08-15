@@ -28,21 +28,22 @@ const nameHover = {
 }
 
 const buttonInfo = [
-    {
-        name:'About',
-        key:1
-    }, 
-    {
-        name:'Projects',
-        key:2
-    }
+    'About',
+    'Projects',
+    'Algorithms',
+    'Contact Me!'
 ]
 
 function Nav(props) {
     return <nav className='nav'>
-        {buttonInfo.map((info) => {
-            const { name,key } = info
-            return <Button name={name} num={key} page={props.page} LoadPage={() => props.LoadPage(key)} key={key}/>
+        {buttonInfo.map((name, index) => {
+            return <Button 
+                name={name} 
+                num={index + 1} 
+                page={props.page} 
+                LoadPage={() => props.LoadPage(index + 1)} 
+                key={index + 1}
+            />
         })}
     </nav>
 }
@@ -75,9 +76,21 @@ class Button extends Component {
         const barStyle = styles[0],
               nameStyle = styles[1]        
         return (
-            <div className='button' onMouseEnter={this.Hover} onMouseLeave={this.Unhover} onClick={() => this.props.LoadPage()}>
-                    <div className='bar' style={barStyle}></div>
-                    <div className='name' style={nameStyle}>{this.props.name}</div>
+            <div 
+                className='button' 
+                onMouseEnter={this.Hover} 
+                onMouseLeave={this.Unhover} 
+                onClick={() => this.props.LoadPage()}
+            >
+                    <div 
+                        className='bar' 
+                        style={barStyle}/>
+                    <div 
+                        className='name' 
+                        style={nameStyle}
+                    >
+                        {this.props.name}
+                    </div>
             </div>
         );
     }
