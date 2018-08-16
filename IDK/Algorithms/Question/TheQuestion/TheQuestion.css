@@ -1,0 +1,11 @@
+.questionTextArea {
+    width:100%;
+}
+.questionStatement {
+    color:white;
+    font-size: 16px;
+    padding:20px;
+    font-family:sans-serif;
+    display:flex;
+    justify-content: center;
+}

@@ -8,7 +8,6 @@ import Particles from 'react-particles-js'
 
 import About from './Pages/About/About'
 import Projects from './Pages/Projects/Projects'
-import Algorithms from './Pages/Algorithms/Algorithms'
 import ContactMe from './Pages/ContactMe/ContactMe'
 
 const slideIn = {
@@ -58,9 +57,6 @@ class Website extends Component {
                     <Projects/>
                 }
                 {this.state.page === 3 &&
-                    <Algorithms/>
-                }
-                {this.state.page === 4 &&
                     <ContactMe/>
                 }
                 <Links/>

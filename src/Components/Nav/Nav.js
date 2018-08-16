@@ -30,7 +30,6 @@ const nameHover = {
 const buttonInfo = [
     'About',
     'Projects',
-    'Algorithms',
     'Contact Me!'
 ]
 

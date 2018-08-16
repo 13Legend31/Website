@@ -25,6 +25,10 @@
     transition:0.5s;
     z-index:2;
     cursor:pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .start:hover {
     color:white;

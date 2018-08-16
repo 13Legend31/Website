@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import './Algorithms.css'
 
-import TheQuestion from './TheQuestion/TheQuestion'
-import AlgList from './AlgQuestions/AlgList'
+import Question from './Question/Question'
+import List from './ActualQuestions/List'
 
 class Algorithms extends Component {
     render() {
         return (
             <section className='algorithmsWrapper'>
                 <div className='favAlgorithm'>Here's a list of my favorite algorithm questions. All my solutions are in C++</div>
-                {AlgList.map(({ Question, Solution }, index) => 
-                    <TheQuestion
-                        key={index}
-                        Question={Question}
-                        Solution={Solution}
+                {List.map(({ question, pages, code }, index) => 
+                    <Question
+                        question={question}
+                        pages={pages}
+                        code={code}
                     />
                 )}
             </section>
